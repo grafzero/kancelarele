@@ -1,6 +1,8 @@
 package com.kancelarele.config.dao;
 
 import com.kancelarele.model.Case;
+import com.kancelarele.model.event.Event;
+import java.util.Comparator;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -25,6 +27,7 @@ public class CaseDaoImpl implements CaseDao {
 
         for (Case cs : results) {
            cs.getEvents().isEmpty(); // initalize collection
+         
         }
         return results;
     }

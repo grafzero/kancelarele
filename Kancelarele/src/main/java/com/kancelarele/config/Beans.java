@@ -2,6 +2,8 @@ package com.kancelarele.config;
 
 import com.kancelarele.config.dao.CaseDao;
 import com.kancelarele.config.dao.CaseDaoImpl;
+import com.kancelarele.config.dao.EventDao;
+import com.kancelarele.config.dao.EventDaoImpl;
 import com.kancelarele.config.service.CaseService;
 import com.kancelarele.config.service.CaseServiceImpl;
 import org.springframework.context.annotation.Bean;
@@ -22,6 +24,11 @@ public class Beans {
     @Bean
     public CaseService caseService(){
     return new CaseServiceImpl();
+    }
+    
+     @Bean
+    public EventDao eventDao(){
+    return new EventDaoImpl();
     }
 
    

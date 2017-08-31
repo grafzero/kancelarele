@@ -8,10 +8,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello chuju!</h1>
+        <h1>Sprawa ${events.get(0).eventCase.signature}</h1>
         
-    <c:forEach var="case" items="${cases}">
-        Sygnatura sprawy: ${case.signature}  ZDARZEŃ: ${case.events.size()}     <a href="case?id=${case.id}">ZOBACZ</a> </br>
+    <c:forEach var="event" items="${events}">
+        Data zdarzenia: ${event.happenedat}  RODZAJ: ${event.eventName}  </br>
         
     </c:forEach>
         
